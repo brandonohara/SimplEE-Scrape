@@ -41,7 +41,7 @@
 		function __construct(){
 			$this->base_url = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=simplee_scrape'.AMP;
 		    ee()->cp->set_right_nav(array(
-		        'feed_form'	=> $this->base_url.'method=feed_form'
+		        'feed_form_button'	=> $this->base_url.'method=feed_form'
 		    ));
 		    
 		    //get channels
@@ -141,7 +141,7 @@
 			    array_push($vars['feeds'], $feed);
 			}
 		
-		    ee()->view->cp_page_title = lang('simplee_scrape_module_name').' > Feeds';
+		    ee()->view->cp_page_title = lang('simplee_scrape_module_name');
 		    return ee()->load->view('view_feeds', $vars, TRUE);
 		}
 		
